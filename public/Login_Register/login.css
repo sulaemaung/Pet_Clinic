@@ -1,0 +1,20 @@
+.login-form button{
+    background-color: rgb(177, 177, 255);
+}
+.login-form{
+    margin-top: 12%;
+}
+.login-form .logo{
+     text-align: center;
+
+}
+@media (max-width:572px) {
+     .login-form{
+        margin-top: 16%;
+    }
+    .login-form .logo{
+        width:80px;
+        height:90px;
+        margin-bottom: 20px;
+    }
+}
