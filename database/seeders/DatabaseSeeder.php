@@ -15,11 +15,19 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         User::create([
+            'name'=>'su su',
+            'email'=>'susu@gmail.com',
+            'phone'=>'0934423456',
+            'address'=>'yangon',
+            'role'=>'user',
+            'gender'=>'female',
+            'password'=>Hash::make('susu12345'),
+
             'name'=>'admin',
             'email'=>'admin@gmail.com',
-            'phone'=>'09123456',
+            'phone'=>'092363263',
             'address'=>'yangon',
-            'role'=>'admin',
+            'role'=>'user',
             'gender'=>'female',
             'password'=>Hash::make('admin123')
         ]);

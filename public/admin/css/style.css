@@ -1,1 +1,150 @@
+:root{
+   --main--color:rgb(176, 184, 255);
+}
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+.sidebar{
+  width:300px;
+  position: fixed;
+  left: 0;
+  top:0;
+  height: 100%;
+  background-color: var(--main--color);
+}
+.sidebar-logo{
+    height: 90px;
+    padding:1rem 0rem 1rem ;
+    color:rgb(73, 55, 174);
+    font-size: 24px;
+    margin-bottom: 50px;
+}
+.sidebar-menu li{
+    width: 100%;
+    margin-bottom: 30px;
+
+}
+.sidebar-menu a{
+    display: block;
+    color:rgb(252, 252, 252);
+    font-size:26px;
+    text-decoration: none;
+}
+.sidebar-menu i{
+    color:rgb(73, 55, 174);
+}
+.sidebar-menu li a:hover{
+    color:rgb(10, 0, 123) ;
+}
+
+.main-content{
+    margin-left: 300px;
+}
+.main-content header{
+    display:flex;
+    justify-content: space-between;
+    padding: 1rem;
+    box-shadow:2px 2px 5px rgb(27, 27, 27);
+    top:0;
+}
+.searchBtn{
+    border:2px solid;
+    border-radius: 30px;
+    padding:3px;
+    display: flex;
+    overflow-x: hidden;
+    align-items: center;
+    margin-right: 20px;
+
+}
+.searchBtn input{
+    padding: 7px;
+    width:200px;
+    border:none;
+    outline: none;
+}
+.searchBtn span{
+    display:inline-block;
+    border-radius: 20px;
+    margin-right: 10px;
+    font-size: 20px;
+    color:rgb(80, 80, 237);
+}
+
+.userAccount a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+
+}
+.userAccount img{
+    border-radius:50%;
+    border:3px solid;
+    margin-right: 7px;
+}
+.userAccount h4{
+    font-size: 25px;
+}
+main{
+    padding: 2rem 1.5rem;
+    background-color: rgb(241, 241, 241);
+    padding: 2rem 1.4rem;
+    margin-top: 5px;
+    height: 35vh;
+    margin-left: 300px;
+}
+.cards{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    grid-gap:2rem;
+    margin-top: 20px;
+}
+.card{
+    box-shadow: 2px 2px 5px darkblue;
+    padding: 1rem;
+}
+.card div{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom: 10px;
+}
+.card i{
+    font-size: 40px;
+    color:rgb(87, 87, 242);
+    margin-top: 20px;
+}
+.container-fluid{
+    background-color: rgb(241, 241, 241);
+    height: 150vh;
+}
+.addServiceBtn a button{
+    border-radius: 10px;
+    padding: 6px;
+    background-color: rgb(183, 255, 226);
+    font-size: 18px;
+
+}
+.form{
+    background-color:rgb(203, 255, 203);
+    padding: 15px;
+    border-radius: 8px;
+
+}
+.createBtn span button{
+    border-radius: 10px;
+    padding: 6px;
+    background-color: rgb(0, 0, 0);
+    font-size: 18px;
+    width: 90px;
+    color: azure;
+    text-align:center;
+    margin-left: 85%;
+}
+
+
 

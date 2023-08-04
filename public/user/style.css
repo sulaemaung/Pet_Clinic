@@ -1,0 +1,283 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+.navBar{
+    text-align: center;
+    color:rgb(0, 0, 0);
+    background-color: rgb(176, 184, 255);
+    padding:0.5rem;
+    z-index:30;
+
+}
+.navBar .nav-menu ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+.nav-menu ul li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+.nav-menu ul li a:hover{
+    color: rgb(69, 66, 227);
+    transition: 0.5s;
+}
+.navBar .logo{
+    display: flex;
+    justify-content: space-around;
+}
+.navBar .reqBtn button{
+    padding:10px;
+    font-size: 20px;
+    color: rgb(83, 83, 255);
+    width:400px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: rgb(255, 245, 245);
+    margin-left: 70px;
+}
+
+.navBar .logoutBtn button{
+    font-size: 15px;
+    color: rgb(148, 0, 0);
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow:0px 2px rgb(109, 109, 109);
+    background-color:rgb(255, 139, 156);
+
+}
+.main-content .home{
+   display: flex;
+   margin-top: 30px;
+
+}
+.main-content .home img{
+    width:70%;
+     height:30%;
+    margin-right: 10px;
+}
+.main-content .home h2{
+ font-size: 20px;
+ font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ color:rgb(49, 60, 255);
+ margin-top: 20px;
+ margin-right:70px;
+ box-shadow: 0px 4px 3px 6px rgb(184, 184, 184);
+ padding:20px;
+ background-color: antiquewhite;
+}
+.main-content .service{
+    display:flex;
+    justify-content:space-around;
+    margin-top:200px;
+    text-decoration: none;
+}
+
+.card{
+  width:250px;
+  height:100px;
+  padding:2rem 1rem;
+  background-color: aliceblue;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  box-shadow: 0px 4px 9px rgb(0, 0, 0);
+  transition: 0.5s ease-in-out;
+}
+.card:hover{
+    transform: translateY(20px);
+}
+.card::before{
+ content:'';
+ position:absolute;
+ width:100%;
+ height:100%;
+ display: block;
+ top:0;
+ left:0;
+ opacity:0;
+ transition: 0.5s;
+ z-index:2;
+ background:linear-gradient(to bottom,rgba(140, 157, 255, 0.5),rgb(218, 255, 154));
+}
+.card:hover::before{
+    opacity: 1;
+}
+.card img{
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.card h3{
+    position: relative;
+    color: rgb(65, 55, 255);
+    z-index:3;
+    opacity:0;
+    margin-top:230px;
+    transform: translateY(40px);
+    transition: 0.5s;
+    margin-right: 30px;
+    text-shadow:0px 4px 2px rgb(246, 246, 246);
+}
+.main-content .service .card h3:second-child{
+    margin-left: 40px;
+}
+.card:hover h3{
+   opacity: 1;
+   transform: translateY(0px);
+}
+.header{
+    background-color: rgb(226, 226, 226);
+    padding: 20px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    text-shadow: 0px 4px 8px rgb(176, 184, 255);
+}
+.appointment{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(242, 242, 242);
+    height: 300vh;
+}
+.appointment .info{
+    margin: 30px;
+
+}
+.appointment .businessInfo{
+   width:500px;
+   margin-top: 50px;
+
+}
+.appointment button{
+    color:rgb(255, 255, 255);
+    padding: 6px;
+    background-color: rgb(176, 184, 255);
+    border-radius:10px;
+    width:100px;
+}
+.serviceCard{
+    width:75%;
+    height:230px;
+    padding:2rem 1rem;
+    background-color: rgb(253, 253, 253);
+    margin-left: 10%;
+    box-shadow:2px 2px 4px 3px rgb(196, 202, 255);
+    border: 2px;
+    margin-top: 20px;
+
+}
+.clinicimg img{
+    height: 500px;
+    width: 900px;
+    margin-left: 330px;
+    margin-top: 30px;
+}
+.clinicimg h2{
+    border:2px;
+    box-shadow:2px 2px 4px 3px rgb(245, 245, 245);
+    margin: 50px;
+    padding: 30px;
+    background-color: antiquewhite;
+    width:80%;
+    margin-left:150px;
+
+}
+.doctor {
+   display: flex;
+   justify-content: space-around;
+
+}
+
+.card h4{
+    position: relative;
+    color: rgb(0, 0, 0);
+    z-index:5;
+    opacity:0;
+    margin-top:200px;
+    transform: translateY(40px);
+    transition: 0.5s;
+    margin-right: 30px;
+    text-shadow:0px 4px 2px rgb(246, 246, 246);
+}
+.card:hover h4{
+    opacity: 1;
+    transform: translateY(0px);
+ }
+ .footer{
+    margin-top: 100px;
+    background-color: aliceblue;
+    padding: 15px;
+ }
+ .footer .icon{
+    display: flex;
+    margin: 20px;
+    justify-content: space-around;
+}
+@media(max-width:1531px){
+         .clinicimg img{
+         margin-left: 250px;
+        }
+         .main-content .home{
+            display: grid;
+
+        }
+         .main-content .home img{
+                width:90%;
+                 height:75%;
+                margin-left: 20px;
+                margin-top: 30px;
+         }
+        .main-content .home h2{
+          font-size: 25px;
+          font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+          color:rgb(49, 60, 255);
+          box-shadow: 0px 4px 3px 6px rgb(184, 184, 184);
+          background-color: antiquewhite;
+          margin-left: 30px;
+         }
+}
+@media(max-width:1375px){
+    .clinicimg img{
+    margin-left: 200px;
+   }
+
+}
+@media(max-width:1294px){
+    .serviceCard{
+        width:90%;
+        height:230px;
+        padding:2rem 1rem;
+        background-color: rgb(253, 253, 253);
+        margin-left: 5%;
+        box-shadow:2px 2px 4px 3px rgb(196, 202, 255);
+        border: 2px;
+        margin-top: 20px;
+
+    }
+}
+@media(max-width:1375px){
+    .clinicimg img{
+        height: 400px;
+        width: 800px;
+        margin-left: 250px;
+        margin-top: 30px;
+    }
+}
+@media(max-width:1265px){
+    .clinicimg img{
+        height: 400px;
+        width: 750px;
+        margin-left: 210px;
+        margin-top: 30px;
+    }
+}
+
+
+
+
