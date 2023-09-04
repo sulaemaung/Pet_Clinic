@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Doctor;
 use App\Models\Service;
 use App\Models\Appointment;
 use Illuminate\Http\Request;
@@ -13,12 +14,13 @@ class AppointmentController extends Controller
      //direcrt appointment page
     public function appointmentPage(){
         $service=Service::get();
-        return view('user.appointment',compact('service'));
+        $doctorList=Doctor::get();
+        return view('user.appointment',compact('service','doctorList'));
     }
      //create appointment data
      public function createAppointment(Request $request){
          $data=$this->requestAppointData($request);
-          Appointment::create($data);
+         Appointment::create($data);
          return redirect()->route('user#home');
     }
      //request appointment data

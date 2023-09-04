@@ -97,6 +97,7 @@ main{
     margin-top: 5px;
     height: 35vh;
     margin-left: 300px;
+
 }
 .cards{
     display:grid;
@@ -145,6 +146,49 @@ main{
     text-align:center;
     margin-left: 85%;
 }
+.adminInfo{
+    background-color: rgb(241, 241, 241);
+    display:none;
+
+
+}
+.adminInfo .row .col-8{
+    background-color: rgb(176, 184, 255);
+    height: 200px;
+    width: 400px;
+    position: absolute;
+    z-index: 80;
+    border-radius: 6px;
+}
+.adminInfo .row .col-8 a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    margin-left: 15px;
+}
+.adminInfo .row .col-8 a span{
+    color: rgb(87, 87, 242);
+}
+.adminInfo.open{
+    display:block;
+}
+.updateBtn{
+  background-color: rgb(176, 184, 255);
+  width:200px;
+  padding: 5px;
+  color: rgb(255, 255, 255);
+  border-radius: 6px;
+
+}
+.changeBtn{
+    background-color: rgb(176, 184, 255);
+    width:200px;
+    padding: 5px;
+    color: rgb(255, 255, 255);
+    border-radius: 6px;
+    float: right;
+
+}
+
 
 
 

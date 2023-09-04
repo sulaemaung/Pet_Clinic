@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('doctor_name');
             $table->double('doctor_exp');
             $table->string('doctor_image');
+            $table->string('gender');
             $table->timestamps();
         });
     }

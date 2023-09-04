@@ -25,12 +25,19 @@
                 <h3>Appointment</h3>
              </div>
          </a>
-         <a href="" style=text-decoration:none;>
+         <a href="{{route('user#aboutus')}}" style=text-decoration:none;>
+            <div class="card" >
+                <img src="{{asset('image/dog-care4.jpg')}}"  alt="">
+                <h3>About us</h3>
+             </div>
+         </a>
+         <a href="{{route('user#contact')}}" style=text-decoration:none;>
             <div class="card" >
                 <img src="{{asset('image/dog-care3.jpg')}}"  alt="">
                 <h3>Contact us</h3>
              </div>
          </a>
+
     </div>
 
 
@@ -38,24 +45,24 @@
      {{-- Start footer --}}
        <div class="footer">
           <div class="row">
-            <div class="col-5">
+            <div class="col-7">
                 <div class="aboutus ms-4">
-                    <h2 class="mb-5">About us</h2>
+                    <h2 class="mb-3">About us</h2>
                    <h5 class=text-muted>Lorem ipsum dolor sit, amet consectetur
                       adipisicing elit. Totam beatae ipsa eveniet explicabo
-                       similique ipsam perspiciatis incidunt laboriosam ducimus dolorem, facere quod optio recusandae magni tempore, sint consectetur vel quam.
+                       similique ipsam perspiciatis inci vel quam.
                    </h5>
                  <div class="icon ">
-                    <h3><i class="fa-brands fa-twitter bg-dark text-white p-2"></i></h3>
-                    <h3><i class="fa-brands fa-facebook bg-dark text-white p-2"></i></h3>
-                    <h3><i class="fa-brands fa-instagram bg-dark text-white p-2"></i></h3>
-                    <h3><i class="fa-brands fa-youtube bg-dark text-white p-2"></i></h3>
+                    <h3><i class="fa-brands fa-twitter bg-white text-primary p-2 rounded "></i></h3>
+                    <h3><i class="fa-brands fa-facebook bg-primary text-white p-2 rounded"></i></h3>
+                    <h3><i class="fa-brands fa-instagram bg-warning text-white p-2 rounded"></i></h3>
+                    <h3><i class="fa-brands fa-youtube bg-danger text-white p-2 rounded"></i></h3>
                  </div>
             </div>
             </div>
             <div class="col">
                 <div class="support">
-                    <h2 class="mb-5">Support</h2>
+                    <h2 class="mb-3">Support</h2>
                     <h4 class=text-muted>FAQ</h4><br>
                     <h4 class=text-muted>Privacy policy</h4><br>
                     <h4 class=text-muted>Help</h4><br>
@@ -64,7 +71,7 @@
             </div>
            <div class="col">
             <div class="contactinfo">
-                <h2 class="mb-5">Contact us</h2>
+                <h2 class="mb-3">Contact us</h2>
                 <h5><i class="fa-solid fa-phone"></i> 0912345677</h5>
                 <h5><i class="fa-solid fa-envelope"></i> clinic@gmail.com</h5>
             </div>

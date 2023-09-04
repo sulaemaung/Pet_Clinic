@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Carbon\Carbon;
+use App\Models\Doctor;
 use App\Models\Contact;
 use App\Models\Service;
 use Illuminate\Http\Request;
@@ -21,7 +22,8 @@ class UserController extends Controller
     }
      //direct user service page
      public function aboutusPage(){
-         return view('user.aboutus');
+         $doctorList=Doctor::get();
+         return view('user.aboutus',compact('doctorList'));
     }
       //direct user service page
       public function contactPage(){

@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\DoctorController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\AppointmentController;
 
@@ -24,7 +26,7 @@ Route::get('loginPage',[AuthController::class,'loginPage'])->name('auth#loginPag
 Route::get('registerPage',[AuthController::class,'registerPage'])->name('auth#registerPage');
 
 
-Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified'])->group(function () {
+Route::middleware(['auth'])->group(function () {
 
 //dashboard
 Route::get('dashboard',[AuthController::class,'dashboard'])->name('dashboard');
@@ -39,6 +41,16 @@ Route::middleware(['admin_auth'])->group(function(){
         Route::get('/deleteService/{id}',[ServiceController::class,'deleteService'])->name('delete#service');
         Route::get('/editServicePage/{id}',[ServiceController::class,'editServicePage'])->name('edit#servicePage');
         Route::post('/updateService',[ServiceController::class,'updateService'])->name('update#service');
+        Route::get('/contactPage',[ContactController::class,'contactPage'])->name('admin#contactPage');
+        Route::get('/clientPage',[AdminController::class,'clientPage'])->name('admin#clientPage');
+        Route::get('/doctorPage',[DoctorController::class,'doctorPage'])->name('admin#doctorPage');
+        Route::get('/createDoctorPage',[DoctorController::class,'createDoctorPage'])->name('create#doctorPage');
+        Route::post('/createDoctor',[DoctorController::class,'createDoctor'])->name('create#doctor');
+        Route::get('/deleteDoctor/{id}',[DoctorController::class,'deleteDoctor'])->name('delete#doctor');
+        Route::get('/changePassword',[AdminController::class,'changePassword'])->name('admin#changePassword');
+        Route::post('/updatePassword',[AdminController::class,'updatePassword'])->name('admin#updatePassword');
+        Route::get('/update/accountPage',[AdminController::class,'updateAccountPage'])->name('admin#updateAccountPage');
+        Route::post('/update/account/',[AdminController::class,'updateAccount'])->name('admin#updateAccount');
     });
 });
 

@@ -25,16 +25,16 @@
                     <a href="{{route('admin#home')}}"><span><i class="fa-solid fa-clipboard-list me-3"></i></i>Appointment</span></a>
                 </li>
                 <li>
-                    <a href=""> <span><i class="fa-solid fa-user-group me-3"></i>Clients</span></a>
+                    <a href="{{route('admin#clientPage')}}"> <span><i class="fa-solid fa-user-group me-3"></i>Clients</span></a>
                 </li>
                 <li>
-                    <a href=""><span><i class="fa-solid fa-user-doctor me-3"></i>Doctors</span></a>
+                    <a href="{{route('admin#doctorPage')}}"><span><i class="fa-solid fa-user-doctor me-3"></i>Doctors</span></a>
                 </li>
                 <li>
                     <a href="{{route('admin#service')}}"><span><i class="fa-solid fa-book me-3"></i>Services</span></a>
                 </li>
                 <li>
-                    <a href=""><span><i class="fa-solid fa-envelope me-3"></i>Contact</span></a>
+                    <a href="{{route('admin#contactPage')}}"><span><i class="fa-solid fa-envelope me-3"></i>Contact</span></a>
                 </li>
             </ul>
           </div>
@@ -48,37 +48,46 @@
                     <label for=""><span><i class="fa-solid fa-bars"></i></span></label>
                      Dashboard
                 </h1>
-                <div class="searchBtn">
-                      <input type="text" placeholder="Search here">
-                      <span><i class="fa-solid fa-magnifying-glass "></i></span>
-                </div>
+                    </form>
+
                 <div class="userAccount">
-                    <a href="">
-                        <img src="{{asset('image/user profile.webp')}}" alt="" width="40px" height="40px">
-                        <span><h4>{{Auth::user()->name}}</h4></span></a>
+                     <span><img src="{{asset('storage/'.Auth::user()->image)}}" alt="" width="40px" height="40px"><span class="fs-3">{{Auth::user()->name}}</span></span>
                 </div>
-
-
             </header>
 
+            <div class="adminInfo">
+                <div class="row ">
+                    <div class="col-8 offset-7">
+                        <a href="{{route('admin#updateAccountPage')}}"><h4 class=""><span><i class="fa-solid fa-user me-3"></i></span>Account</h4></a>
+                        <a href="{{route('admin#changePassword')}}"><h4 class=""><span><i class="fa-solid fa-key me-3"></i></span>Change password</h4></a>
+                        <form action="{{route('logout')}}" method="post">
+                            @csrf
+                            <div class="logoutBtn d-flex justify-content-center ">
+                               <button class="btn btn-danger text-white col-10 mt-3 me-5"><i class="fa-solid fa-right-from-bracket me-2"></i>Logout</button>
+                            </div>
+                           </form>
+                    </div>
+                </div>
 
-        </div>
+            </div>
+    </div>
+
     <div>
+
         @yield('content')
 
-    <form action="{{route('logout')}}" method="post">
-        @csrf
-        <button type="submit">logout</button>
-    </form>
+
 
     </div>
 
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script>
-
-
-
-
+  $(document).ready(function(){
+    $('.userAccount').click(function(){
+         $('.adminInfo').toggleClass('open');
+    })
+ })
 
 </script>
 </html>

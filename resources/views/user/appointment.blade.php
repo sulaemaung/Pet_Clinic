@@ -27,9 +27,12 @@
                     <label for="">Doctor's name</label><br>
                     <select  id="" class="form-control" name="doctorName">
                         <option value="" >Select doctor name</option>
-                        <option value="kyaw" >Dr.kyaw</option></select><br>
+                        @foreach ($doctorList as $d)
+                        <option value="{{$d->doctor_name}}">{{$d->doctor_name}}</option><br>
+                        @endforeach
+                    </select>
                     <p>Click here to see our doctors
-                        <a href="{{route('user#aboutus')}}">doctor page</a>
+                        <a href="{{route('user#aboutus')}}">Doctor Information</a>
                     </p>
                     <h3>Appointment Details</h3><br><hr>
 
@@ -56,7 +59,7 @@
                          <input type="radio" name="partOfTheDay2" value="midday"><label for="midday">Midday</label>
                          <input type="radio" name="partOfTheDay2" value="evening"><label for="evening">Evening</label>
                     <br>
-                    <button class="float-end" type="submit">Submit</button>
+                    <button class="float-end mt-1" type="submit">Submit</button>
         </div>
     <div class="businessInfo">
         <div class="business">
@@ -129,5 +132,6 @@
          </div>
 
     </div>
+
 
 @endsection

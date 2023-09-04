@@ -2,8 +2,8 @@
 @section('content')
 <div class="main-content">
      <div class="container-fluid">
-         <div class="addServiceBtn col-2 offset-10">
-            <a href="{{route('create#servicePage')}}"><button class="mt-5">+Add service</button></a>
+         <div class="addServiceBtn col-4 offset-10">
+            <a href="{{route('create#servicePage')}}"><button class="mt-5 mb-4">+Add service</button></a>
          </div>
          <div class="col-10 offset-1">
             <table class="table">

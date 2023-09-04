@@ -19,7 +19,8 @@
     {{-- Start navbar --}}
     <div class="navBar">
         <div class="logo">
-            <h1><span><img src="{{asset('image/Dog1.png')}}" width="100px" height="90px" alt="">Glory Pet Clinic</span></h1>
+            <div id="menu" class="bx-menu"><i class="fa-solid fa-bars"></i></div>
+            <h1><span class="fs-2"><img src="{{asset('image/Dog1.png')}}" alt="">Glory Pet Clinic</span></h1>
             <div class="reqBtn">
                <a href="{{route('user#appointment')}}"> <button>REQUEST APPOINTMENT</button></a>
             </div>
@@ -30,14 +31,17 @@
                 </form>
             </div>
 
+
         </div>
 
        <div class="nav-menu">
         <ul>
+
             <li><a href="{{route('user#home')}}">Home</a></li>
             <li><a href="{{route('user#service')}}">Services</a></li>
             <li><a href="{{route('user#aboutus')}}">About us</a></li>
             <li><a href="{{route('user#contact')}}">Contact</a></li>
+
         </ul>
        </div>
     </div>
@@ -47,8 +51,12 @@
 
 </body>
 <script>
-
-
+    $(document).ready(function(){
+      $('#menu').click(function(){
+        $(this).toggleClass('.bx-menu');
+         $('.navBar .nav-menu').toggleClass('active');
+    });
+    });
 
 </script>
 </html>
